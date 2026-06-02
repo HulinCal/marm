@@ -1,6 +1,11 @@
 # Marm - 简单机械臂仿真项目
 
 这是一个基于 ROS 2 和 Gazebo 的简单机械臂仿真项目，支持使用 MoveIt 进行运动规划和控制。
+                                仿真显示
+![仿真显示]
+
+(https://github.com/HulinCal/marm/blob/main/src/11-2026-06-02_12.56.40.mp4)
+
 
 ## 项目结构
 
