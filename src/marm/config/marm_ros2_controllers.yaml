@@ -1,0 +1,89 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    gripper_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+arm_controller:
+  ros__parameters:
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+    open_loop_control: true
+    topic_interface: true
+    constraints:
+      stopped_velocity_tolerance: 0.05
+      goal_time: 0.5
+
+    gains:
+      joint1:
+        p: 100.0
+        i: 0.0
+        d: 10.0
+        i_clamp: 0.0
+      joint2:
+        p: 100.0
+        i: 0.0
+        d: 10.0
+        i_clamp: 0.0
+      joint3:
+        p: 100.0
+        i: 0.0
+        d: 10.0
+        i_clamp: 0.0
+      joint4:
+        p: 100.0
+        i: 0.0
+        d: 10.0
+        i_clamp: 0.0
+      joint5:
+        p: 100.0
+        i: 0.0
+        d: 10.0
+        i_clamp: 0.0
+      joint6:
+        p: 100.0
+        i: 0.0
+        d: 10.0
+        i_clamp: 0.0
+
+gripper_controller:
+  ros__parameters:
+    joints:
+      - finger_joint1
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+    open_loop_control: true
+    constraints:
+      stopped_velocity_tolerance: 0.05
+      goal_time: 0.5
+
+    gains:
+      finger_joint1:
+        p: 100.0
+        i: 0.0
+        d: 10.0
+        i_clamp: 0.0

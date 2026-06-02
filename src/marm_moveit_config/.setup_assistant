@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: marm
+    relative_path: urdf/arm.urdf
+  srdf:
+    relative_path: config/marm.srdf
+  package_settings:
+    author_name: hl
+    author_email: 2342@qq.com
+    generated_timestamp: 1776731749
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
